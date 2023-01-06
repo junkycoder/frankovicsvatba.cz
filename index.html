@@ -54,7 +54,7 @@
     }
 
     article {
-      padding: 1rem;
+      padding: 0 1rem;
     }
 
     article h3 {
@@ -90,6 +90,10 @@
         border-bottom: 1px solid var(--text-color);
       }
 
+      nav ul {
+        list-style-type: none;
+      }
+
       article {
         grid-area: article;
       }
@@ -116,6 +120,13 @@
       <a href="mailto:frankovicsvatba@gmail.com">frankovicsvatba@gmail.com</a><br />
       Na který můžete také zasílat Vaše dotazy.
     </p>
+    <nav>
+      <ul>
+        <li><a href="#nase-prani">Naše přání</a></li>
+        <li><a href="#kontakty">Důležité kontakty a adresy</a></li>
+        <li><a href="trasa.html">Popis trasy pro nevidomé</a></li>
+      </ul>
+    </nav>
     <div role="img" aria-label="Pár našich fotek">
       <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_rgniuy.jpeg" alt="Těhotná veronika s hubeným Tomášem" />
       <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_2_cjb9ri.jpeg" alt="Novorozená Stázinka, Veronika a stále hubený Tomáš ve stoje v porodnici" />
@@ -190,7 +201,7 @@
     </p>
   </article>
   <aside>
-    <h1>Naše přání</h1>
+    <h1 id="nase-prani">Naše přání</h1>
     <p>Vážení a milý, moc si přejeme aby jste na náš velký den dorazili a všichni si ho tak s námi společně
       užili.</p>
     <p>Prosíme o dodržování pokynů koordinátora, případně personálu restaurace.</p>
@@ -204,7 +215,7 @@
       můžete obrátit na Tomáše Garrigue masaryka.<br />
       Berte prosím vše s rezervou, jakákoliv vzpomínka na Vás nám udělá radost 😊
     </p>
-    <h2>Důležité kontakty a adresy</h2>
+    <h2 id="kontakty">Důležité kontakty a adresy</h2>
     Mail: <a href="mailto:frankovicsvatba@gmail.com">frankovicsvatba@gmail.com</a>
     <h3>Místo konání</h3>
     <p>Svatojánský Dvůr
