@@ -38,16 +38,6 @@
       padding: 1rem;
     }
 
-    div[role="img"] {
-      margin: 2rem 0;
-    }
-
-    div[role="img"] img {
-      width: 100%;
-      max-width: 400px;
-      margin: 0.5rem;
-    }
-
     header h1 {
       font-size: 2rem;
       margin: 0;
@@ -60,7 +50,6 @@
     article h3 {
       text-align: center;
     }
-
 
     article div {
       display: flex;
@@ -82,15 +71,11 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 33%;
-        grid-template-areas: "header header" "article aside";
+        grid-template-areas: "article aside";
       }
 
-      header {
-        grid-area: header;
-        border-bottom: 1px solid var(--text-color);
-      }
-
-      nav ul, nav ul li {
+      nav ul,
+      nav ul li {
         list-style-type: none;
       }
 
@@ -109,47 +94,47 @@
 </head>
 
 <body>
-  <header>
-    <h1>Veronika a Tomáš<br />25. 8. 2023</h1>
-    <p>Vážení a milý, tak to na nás taky přišlo a my budeme rádi, když náš velkolepý den budete s námi
-      sdílet, a to nejen v myšlenkách, ale budete s námi a součástí našeho svatebního dne.</p>
-    <p>Zde se dozvíte vše podstatné. Tímto Vás žádáme o přečtení, i když se asi případné improvizaci
-      nevyhneme, tak se budeme snažit, aby vše proběhlo hlavně s úsměvem.</p>
-    <p>Zároveň prosíme všechny pozvané, aby svou účast potvrdili, pokud to ještě neudělali, a to nevěstě
-      nebo ženichovi na Vám dobře známé kontakty nebo na mail
-      <a href="mailto:frankovicsvatba@gmail.com">frankovicsvatba@gmail.com</a><br />
-      Na který můžete také zasílat Vaše dotazy.
-    </p>
-    <nav>
-      <ul>
-        <li><a href="#nase-prani">Naše přání</a></li>
-        <li><a href="#kontakty">Důležité kontakty a adresy</a></li>
-        <li><a href="trasa.html">Popis trasy pro nevidomé</a></li>
-      </ul>
-    </nav>
-    <div role="img" aria-label="Pár našich fotek">
-      <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_rgniuy.jpeg" alt="Těhotná veronika s hubeným Tomášem" />
-      <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_2_cjb9ri.jpeg" alt="Novorozená Stázinka, Veronika a stále hubený Tomáš ve stoje v porodnici" />
-      <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_3_k69jze.jpeg" alt="Tomáš s Veronikou v kuliších na sněhu v zimě" />
-      <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_5_zymzrr.jpeg" alt="Tomáš s Veronikou v gala večer před barem" />
-      <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_4_woaxpe.jpeg" alt="Tomáš s Veronikou držící Stázi na jaře venku" />
-    </div>
-  </header>
   <article>
+    <header>
+      <h1>Veronika a Tomáš<br />25. 8. 2023</h1>
+      <nav>
+        <ul>
+          <li><a href="#nase-prani">Naše přání</a></li>
+          <li><a href="#kontakty">Důležité kontakty a adresy</a></li>
+          <li><a href="trasa.html">Popis trasy pro nevidomé</a></li>
+        </ul>
+      </nav>
+      <p>Vážení a milý, tak to na nás taky přišlo a my budeme rádi, když náš velkolepý den budete s námi
+        sdílet, a to nejen v myšlenkách, ale budete s námi a součástí našeho svatebního dne.</p>
+
+      <img
+        src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_3_k69jze.jpeg"
+        alt="Tomáš s Veronikou v kuliších na sněhu v zimě s flaškou rumu v ruce" />
+
+      <p>Zde se dozvíte vše podstatné. Tímto Vás žádáme o přečtení, i když se asi případné improvizaci
+        nevyhneme, tak se budeme snažit, aby vše proběhlo hlavně s úsměvem.</p>
+      <p>Zároveň prosíme všechny pozvané, aby svou účast potvrdili, pokud to ještě neudělali, a to nevěstě
+        nebo ženichovi na Vám dobře známé kontakty nebo na mail
+        <a href="mailto:frankovicsvatba@gmail.com">frankovicsvatba@gmail.com</a><br />
+        Na který můžete také zasílat Vaše dotazy.
+      </p>
+      <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_5_zymzrr.jpeg" alt="Tomáš s Veronikou v Tunisu na dovolený" />
+    </header>
     <h1>Náš svatební den</h1>
-    <p>Je <strong>25. 8. 2023</strong>.<br/> Obřad a svatební párty se bude konat na stejném místě a to v prostředí restaurace a hotelu
+    <p>Je <strong>25. 8. 2023</strong>.</p>
+    <p>Obřad a svatební párty se bude konat na stejném místě a to v prostředí
+      restaurace a hotelu
       Svatojánský Dvůr<br />
       Střížkovská 1/29A, Praha 8 Střížkov<br />
       <a href="https://www.svdvur.cz">www.svdvur.cz</a>
     </p>
-    <iframe
-      title="Mapa Svatojánský Dvůr"
+    <iframe title="Mapa Svatojánský Dvůr"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.928696317885!2d14.47858493504019!3d50.125056213644555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470beca02cfdb0cb%3A0x5c0a5e555fcbf66!2zU3ZhdG9qw6Fuc2vDvSBEdsWvcg!5e0!3m2!1scs!2scz!4v1672761595418!5m2!1scs!2scz"
-      width="600" height="450" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <p>Součástí zahrady je dětské hřiště, takže i děti se snad nudit nebudou. Určitě budeme na ně myslet v
       rámci programu.</p>
     <p>Pro svatební hosty jsme domluvili v případě zájmu ubytování ve vedlejším hotelu DUO</p>
+    <center><img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_rgniuy.jpeg" alt="Těhotná Veronika s hubeným Tomášem" /></center>
     <h2>Hotel DUO</h2>
     <p>
     <address>
@@ -159,13 +144,12 @@
     E-mail: <a href="mailto:info@hotelduo.cz">info@hotelduo.cz</a>
     <a href="https://www.hotelduo.cz">www.hotelduo.cz</a>
     </p>
-    <iframe
-      title="Mapa Hotel DUO"
+    <iframe title="Mapa Hotel DUO"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.824020919393!2d14.483542616108632!3d50.12701487943211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bec9f3e172603%3A0x19ad14d3ab594bd!2sHotel%20Duo!5e0!3m2!1scs!2scz!4v1672761556452!5m2!1scs!2scz"
-      width="600" height="450" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <p>S rezervací neotálejte, je pro vás domluvena sleva na ubytování.</p>
     <p>V areálu, ale i u hotelu DUO je možnost parkování.</p>
+    <center><img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_2_cjb9ri.jpeg" alt="Novorozená Stázinka, Veronika a stále hubený Tomáš ve stoje v porodnici" /></center>
     <h2>Program a informace</h2>
     <h3>13:00<br />příjezd svatebních hostů</h3>
     <p>
@@ -191,6 +175,7 @@
       malé překvapení.</p>
     <p>Do párty se budeme snažit zakomponovat program pro děti, bude prostor na hry a především volná
       zábava.</p>
+    <center><img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_4_woaxpe.jpeg" alt="Tomáš s Veronikou držící Stázi na jaře venku" /></center>
     <h3>22:00</h3>
     <p>Přesunutí párty do vnitřních prostor z důvodu nočního klidu, ale to je jen jediné omezení a
       pak můžeme tančit, pít a bavit se až do ranních hodin.</p>
