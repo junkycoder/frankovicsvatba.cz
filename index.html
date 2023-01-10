@@ -36,7 +36,13 @@
       color: var(--text-color);
       background-color: var(--background-color);
       box-sizing: border-box;
-      padding: 2rem;
+    }
+
+
+    @media (orientation: landscape) {
+      body {
+        padding: 0 env(safe-area-inset-left, 1rem) 0 env(safe-area-inset-right, 1rem);
+      }
     }
 
     @media (min-width: 512px) {
