@@ -10,91 +10,130 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Playfair+Display&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Playfair+Display&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
     :root {
-      --background-color: #ffa386;
+      --background-color: #fff;
       --text-color: #222;
-      --link-color: black;
+      --high-color: #ff8c69;
+      --link-color: var(--high-color);
+      --border-radius: 1rem;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
         --background-color: #333;
-        --text-color: #ff8c69;
-        --link-color: orange;
+        --text-color: #f2f2f2;
       }
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 200;
-      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
       line-height: 1.5;
       color: var(--text-color);
       background-color: var(--background-color);
     }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: 'Playfair Display', serif;
+
+    @media (min-width: 512px) {
+      body {
+        font-size: 2rem;
+      }
     }
 
     a {
       color: var(--link-color);
     }
 
-    header h1 {
-      border: 1px dotted var(--text-color);
-      padding: 1rem;
+    p {
+      margin: 2rem 0;
     }
 
-    article h1,
-    article h2,
-    aside h1,
-    aside h2 {
-      border-bottom: 1px dotted var(--text-color);
-      padding-bottom: .5rem;
-      width: 90%;
-    }
-
-    nav ul {
-      padding: 0;
-      list-style: none;
-    }
-    nav ul li {
-      list-style-position: inside;
-      padding: .225rem;
-    }
 
     header {
       text-align: center;
       padding: 1rem;
     }
 
-    header h1 {
-      font-size: 2rem;
+    header .hero h1 {
+      font-size: 2.6rem;
       margin: 0;
+      text-align: center;
     }
 
-    article {
+    header .hero {
+      background-color: var(--high-color);
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    header .hero nav ul {
+      padding: 0;
+    }
+    header .hero nav ul li {
+      padding: 0;
+      font-size: 1.4rem;
+      list-style-type: none;
+      display: inline-block;
+    }
+
+    @media (min-width: 512px) {
+      header .hero nav ul li:not(:last-child)::after {
+        content: " · ";
+      }
+    }
+
+    header .hero a {
+      color: var(--text-color);
+    }
+
+    header .hero a:hover {
+      text-decoration: none;
+    }
+
+    /* hotfix weirdly rendered phone numbers */
+    a[href^="tel:"] {
+      font-family: sans-serif;
+      font-size: 2rem;
+    }
+
+    article,
+    aside {
       padding: 0 1rem;
+    }
+
+    article h1,
+    article h2,
+    aside h1,
+    aside h2 {
+      border-bottom: .5rem dotted var(--text-color);
+      padding-bottom: .5rem;
+      padding-top: 1rem;
     }
 
     article h3 {
       text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    header p,
+    article p,
+    aside p {
+      text-align: justify;
     }
 
     header img,
     article img {
       display: block;
-      margin: 0 auto;
+      margin: 2rem auto;
       max-width: 100%;
+      box-sizing: border-box;
+      border: var(--border-radius) solid var(--high-color);
+      border-radius: var(--border-radius);
     }
 
     article iframe {
@@ -105,16 +144,19 @@
     }
 
     footer {
-      border-top: 1px dotted var(--text-color);
-      margin-top: 1rem;
-      padding-top: 1rem;
+      border-top: .5rem dotted var(--text-color);
+      margin-top: 2rem;
+      padding-top: .5rem;
+    }
+    footer p {
+      margin: 0;
     }
 
     @media (min-width: 768px) {
       body {
         max-width: 1200px;
         display: grid;
-        grid-template-columns: 1fr 33%;
+        grid-template-columns: 1fr 36%;
         grid-template-areas: "header header" "article aside";
         margin: 0 auto;
       }
@@ -138,20 +180,20 @@
 
 <body>
   <header>
-    <h1>Veronika a Tomáš<br/>25. 8. 2023</h1>
-
-    <nav>
-      <ul>
-        <li><a href="#nase-prani">Naše přání</a></li>
-        <li><a href="#kontakty">Důležité kontakty a adresy</a></li>
-        <li><a href="trasa.html">Popis trasy pro nevidomé</a></li>
-      </ul>
-    </nav>
-    <div>
-      <p>Vážení a milý, tak to na nás taky přišlo a my budeme rádi, když náš velkolepý den budete s námi
-        sdílet, a to nejen v myšlenkách, ale budete s námi a součástí našeho svatebního dne.</p>
-      <p>Zde se dozvíte vše podstatné. Tímto Vás žádáme o přečtení, i když se asi případné improvizaci
-        nevyhneme, tak se budeme snažit, aby vše proběhlo hlavně s úsměvem.</p>
+    <div class="hero">
+      <h1>Veronika a Tomáš<br />25. 8. 2023</h1>
+      <nav>
+        <ul>
+          <li><a href="#nase-prani">Naše přání</a></li>
+          <li><a href="#kontakty">Důležité kontakty a adresy</a></li>
+          <li><a href="trasa.html">Popis trasy pro nevidomé</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p>Vážení a milý, tak to na nás taky přišlo a my budeme rádi, když náš velkolepý den budete s námi
+      sdílet, a to nejen v myšlenkách, ale budete s námi a součástí našeho svatebního dne.</p>
+    <p>Zde se dozvíte vše podstatné. Tímto Vás žádáme o přečtení, i když se asi případné improvizaci
+      nevyhneme, tak se budeme snažit, aby vše proběhlo hlavně s úsměvem.</p>
     </div>
     <img
       src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_3_k69jze.jpeg"
@@ -187,12 +229,12 @@
       alt="Těhotná Veronika s hubeným Tomášem" />
     <h2>Hotel DUO</h2>
     <p>
-    <address>
-      Teplická 492/19, 190 00 PRAHA 9
-    </address>
-    Tel: <a href="tel:+420266131111">266 131 111</a>
-    E-mail: <a href="mailto:info@hotelduo.cz">info@hotelduo.cz</a>
-    <a href="https://www.hotelduo.cz">www.hotelduo.cz</a>
+      <address>
+        Teplická 492/19, 190 00 PRAHA 9
+        Tel: <a href="tel:+420266131111">266 131 111</a><br />
+        E-mail: <a href="mailto:info@hotelduo.cz">info@hotelduo.cz</a><br />
+        <a href="https://www.hotelduo.cz">www.hotelduo.cz</a>
+      </address>
     </p>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.824020919393!2d14.483542616108632!3d50.12701487943211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470bec9f3e172603%3A0x19ad14d3ab594bd!2sHotel%20Duo!5e0!3m2!1scs!2scz!4v1672761556452!5m2!1scs!2scz"
@@ -235,7 +277,7 @@
       pak můžeme tančit, pít a bavit se až do ranních hodin.</p>
     <p>S požadavky se obracejte na mail <a href="mailto:frankovicsvatba@gmail.com">frankovicsvatba@gmail.com,</a>,
       nebo na koordinátora Tomáše Nývlta.
-      <a href="tel:+420737751593">737 751 593</a>
+      Tel: <a href="tel:+420737751593" title="Klikněte pro zavolání">737&nbsp;751&nbsp;593</a><br />
       <a href="mailto:nyvlttomas89@seznam.cz">nyvlttomas89@seznam.cz</a>
     </p>
   </article>
@@ -262,23 +304,26 @@
     <a href="https://www.svdvur.cz">www.svdvur.cz</a>
     </p>
     <h3>Možnost ubytování</h3>
-    <p><strong>Hotel DUO</strong><br />
-    <address>Teplická 492/19, 190 00 PRAHA 9</address><br />
-    Tel: <a href="tel:+420266131111">266 131 111</a>
-    E-mail: <a href="mailto:info@hotelduo.cz">info@hotelduo.cz</a>
-    <a href="https://www.hotelduo.cz">www.hotelduo.cz</a>
+    <p>
+      <strong>Hotel DUO</strong><br />
+      <address>
+        Teplická 492/19, 190 00 PRAHA 9<br />
+        Tel: <a href="tel:+420266131111">266 131 111</a><br />
+        E-mail: <a href="mailto:info@hotelduo.cz">info@hotelduo.cz</a><br />
+        <a href="https://www.hotelduo.cz">www.hotelduo.cz</a>
+      </address>
     </p>
     <h3>Koordinátor</h3>
     <p>
       <img width="100%" alt="Koordinátor Tomáš Nývlt"
         src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1673293775/frankovicsvatba.cz/Image-1_fofi6c.jpeg" />
       <strong>Tomáš Nývlt</strong><br />
-      <a href="tel:+420737751593">737 751 593</a><br />
+      <a href="tel:+420737751593" title="Klikněte pro zavolání">737&nbsp;751&nbsp;593</a>
       E-mail: <a href="mailto:nyvlttomas89@seznam.cz">nyvlttomas89@seznam.cz</a>
     </p>
   </aside>
   <footer>
-    <p>&copy; 2024 Frankovičové</p>
+    <p>👋 2023 <a href="https://isymbio.cz/">isymbio</a></p>
   </footer>
 </body>
 

@@ -10,46 +10,61 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Playfair+Display&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Playfair+Display&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
     :root {
-      --background-color: #ffa386;
+      --background-color: #fff;
       --text-color: #222;
-      --link-color: black;
+      --high-color: #ff8c69;
+      --link-color: var(--high-color);
+      --border-radius: 1rem;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
         --background-color: #333;
-        --text-color: #ff8c69;
-        --link-color: orange;
+        --text-color: #f2f2f2;
       }
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
       line-height: 1.5;
       color: var(--text-color);
       background-color: var(--background-color);
+      padding: 1rem;
     }
 
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-family: 'Playfair Display', serif;
-      text-decoration: none;
-      border-bottom: 1px dotted var(--text-color);
-      padding-bottom: .5rem;
-      width: 90%;
+
+    @media (min-width: 512px) {
+      body {
+        font-size: 2rem;
+      }
+    }
+
+    h1 {
+      border-bottom: .5rem dotted var(--text-color);
     }
 
     a {
       color: var(--link-color);
+    }
+
+    p {
+      margin: 2rem 0;
+      text-align: justify;
+    }
+
+    footer {
+      border-top: .5rem dotted var(--text-color);
+      margin-top: 2rem;
+      padding: .5rem;
+    }
+    footer p {
+      margin-top: 0;
     }
 
   </style>
@@ -93,6 +108,9 @@
     (2 vchody) a následně po 20m dorazíte na konec chodníku, kde přejdete ulici a na druhé straně v přímém směru je
     vchod.</p>
   </p>
+  <footer>
+    <p>👋 2023 <a href="https://isymbio.cz/">isymbio</a></p>
+  </footer>
 </body>
 
 </html>
