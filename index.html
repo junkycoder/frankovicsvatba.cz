@@ -49,9 +49,24 @@
       color: var(--link-color);
     }
 
+    header h1 {
+      border: 1px dotted var(--text-color);
+      padding: 1rem;
+    }
+
+    article h1,
+    article h2,
+    aside h1,
+    aside h2 {
+      border-bottom: 1px dotted var(--text-color);
+      padding-bottom: .5rem;
+      width: 90%;
+    }
 
     nav ul li {
       list-style: none;
+      list-style-position: inside;
+      padding: .225rem;
     }
 
     header {
@@ -86,6 +101,12 @@
       margin: 1rem 0;
     }
 
+    footer {
+      border-top: 1px dotted var(--text-color);
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+
     @media (min-width: 768px) {
       body {
         max-width: 1200px;
@@ -114,7 +135,8 @@
 
 <body>
   <header>
-    <h1>Veronika a Tomáš<br />25. 8. 2023</h1>
+    <h1>Veronika a Tomáš<br/>25. 8. 2023</h1>
+
     <nav>
       <ul>
         <li><a href="#nase-prani">Naše přání</a></li>
@@ -227,7 +249,7 @@
       si myslíme, že jsme již dostatečně materiálně zabezpečeni.<br />
       Takže když si nebudete vědět rady, tak se zeptejte Františka palackého, Emy Destinové či dokonce se
       můžete obrátit na Tomáše Garrigue masaryka.<br />
-      Berte prosím vše s rezervou, jakákoliv vzpomínka na Vás nám udělá radost 😊
+      Berte prosím vše s rezervou, jakákoliv vzpomínka na Vás nám udělá radost&nbsp;😊
     </p>
     <h2 id="kontakty">Důležité kontakty a adresy</h2>
     Mail: <a href="mailto:frankovicsvatba@gmail.com">frankovicsvatba@gmail.com</a>
@@ -252,6 +274,9 @@
       E-mail: <a href="mailto:nyvlttomas89@seznam.cz">nyvlttomas89@seznam.cz</a>
     </p>
   </aside>
+  <footer>
+    <p>&copy; 2024 Frankovičové</p>
+  </footer>
 </body>
 
 </html>
