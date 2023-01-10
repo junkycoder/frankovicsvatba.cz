@@ -6,27 +6,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frankovic svatba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Playfair+Display&display=swap"
+    rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Playfair+Display&display=swap');
+
     :root {
-      --background-color: white;
+      --background-color: #ff8c69;
       --text-color: #333;
-      --link-color: darkorange;
+      --link-color: black;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
         --background-color: #333;
-        --text-color: white;
+        --text-color: #ff8c69;
         --link-color: orange;
       }
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 1.2rem;
       line-height: 1.5;
       color: var(--text-color);
       background-color: var(--background-color);
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Playfair Display', serif;
     }
 
     a {
@@ -64,17 +80,20 @@
       margin: 1rem 0;
     }
 
-    /* for desktop, header is over article and aside sidebar. Sidebar is on the right of article and has 33% of body width */
     @media (min-width: 768px) {
       body {
         max-width: 1200px;
-        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 33%;
-        grid-template-areas: "article aside";
+        grid-template-areas: "header header" "article aside";
+        margin: 0 auto;
       }
 
-      nav ul,
+      header {
+        grid-area: header;
+      }
+
+      header div nav ul,
       nav ul li {
         list-style: none;
       }
@@ -85,7 +104,6 @@
 
       aside {
         grid-area: aside;
-        border-left: 1px solid var(--text-color);
         padding-left: 1rem;
         margin-left: 1rem;
       }
@@ -94,32 +112,36 @@
 </head>
 
 <body>
-  <article>
-    <header>
-      <h1>Veronika a Tomáš<br />25. 8. 2023</h1>
-      <nav>
-        <ul>
-          <li><a href="#nase-prani">Naše přání</a></li>
-          <li><a href="#kontakty">Důležité kontakty a adresy</a></li>
-          <li><a href="trasa.html">Popis trasy pro nevidomé</a></li>
-        </ul>
-      </nav>
+  <header>
+    <h1>Veronika a Tomáš<br />25. 8. 2023</h1>
+    <nav>
+      <ul>
+        <li><a href="#nase-prani">Naše přání</a></li>
+        <li><a href="#kontakty">Důležité kontakty a adresy</a></li>
+        <li><a href="trasa.html">Popis trasy pro nevidomé</a></li>
+      </ul>
+    </nav>
+    <div>
       <p>Vážení a milý, tak to na nás taky přišlo a my budeme rádi, když náš velkolepý den budete s námi
         sdílet, a to nejen v myšlenkách, ale budete s námi a součástí našeho svatebního dne.</p>
-
-      <img
-        src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_3_k69jze.jpeg"
-        alt="Tomáš s Veronikou v kuliších na sněhu v zimě s flaškou rumu v ruce" />
-
       <p>Zde se dozvíte vše podstatné. Tímto Vás žádáme o přečtení, i když se asi případné improvizaci
         nevyhneme, tak se budeme snažit, aby vše proběhlo hlavně s úsměvem.</p>
+    </div>
+    <img
+      src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_3_k69jze.jpeg"
+      alt="Tomáš s Veronikou v kuliších na sněhu v zimě s flaškou rumu v ruce" />
+    <div>
       <p>Zároveň prosíme všechny pozvané, aby svou účast potvrdili, pokud to ještě neudělali, a to nevěstě
         nebo ženichovi na Vám dobře známé kontakty nebo na mail
         <a href="mailto:frankovicsvatba@gmail.com">frankovicsvatba@gmail.com</a><br />
         Na který můžete také zasílat Vaše dotazy.
       </p>
-      <img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_5_zymzrr.jpeg" alt="Tomáš s Veronikou v Tunisu na dovolený" />
-    </header>
+    </div>
+    <img
+      src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_5_zymzrr.jpeg"
+      alt="Tomáš s Veronikou v Tunisu na dovolený" />
+  </header>
+  <article>
     <h1>Náš svatební den</h1>
     <p>Je <strong>25. 8. 2023</strong>.</p>
     <p>Obřad a svatební párty se bude konat na stejném místě a to v prostředí
@@ -134,7 +156,9 @@
     <p>Součástí zahrady je dětské hřiště, takže i děti se snad nudit nebudou. Určitě budeme na ně myslet v
       rámci programu.</p>
     <p>Pro svatební hosty jsme domluvili v případě zájmu ubytování ve vedlejším hotelu DUO</p>
-    <center><img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_rgniuy.jpeg" alt="Těhotná Veronika s hubeným Tomášem" /></center>
+    <center><img
+        src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_rgniuy.jpeg"
+        alt="Těhotná Veronika s hubeným Tomášem" /></center>
     <h2>Hotel DUO</h2>
     <p>
     <address>
@@ -149,7 +173,9 @@
       width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <p>S rezervací neotálejte, je pro vás domluvena sleva na ubytování.</p>
     <p>V areálu, ale i u hotelu DUO je možnost parkování.</p>
-    <center><img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_2_cjb9ri.jpeg" alt="Novorozená Stázinka, Veronika a stále hubený Tomáš ve stoje v porodnici" /></center>
+    <center><img
+        src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_2_cjb9ri.jpeg"
+        alt="Novorozená Stázinka, Veronika a stále hubený Tomáš ve stoje v porodnici" /></center>
     <h2>Program a informace</h2>
     <h3>13:00<br />příjezd svatebních hostů</h3>
     <p>
@@ -175,7 +201,9 @@
       malé překvapení.</p>
     <p>Do párty se budeme snažit zakomponovat program pro děti, bude prostor na hry a především volná
       zábava.</p>
-    <center><img src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_4_woaxpe.jpeg" alt="Tomáš s Veronikou držící Stázi na jaře venku" /></center>
+    <center><img
+        src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1672852885/frankovicsvatba.cz/PHOTO-2023-01-01-22-16-39_4_woaxpe.jpeg"
+        alt="Tomáš s Veronikou držící Stázi na jaře venku" /></center>
     <h3>22:00</h3>
     <p>Přesunutí párty do vnitřních prostor z důvodu nočního klidu, ale to je jen jediné omezení a
       pak můžeme tančit, pít a bavit se až do ranních hodin.</p>
@@ -215,7 +243,10 @@
     <a href="https://www.hotelduo.cz">www.hotelduo.cz</a>
     </p>
     <h3>Koordinátor</h3>
-    <p><strong>Tomáš Nývlt</strong><br />
+    <p>
+      <img width="100%" alt="Koordinátor Tomáš Nývlt"
+        src="https://res.cloudinary.com/dzfx6epxu/image/upload/v1673293775/frankovicsvatba.cz/Image-1_fofi6c.jpeg" />
+      <strong>Tomáš Nývlt</strong><br />
       <a href="tel:+420737751593">737 751 593</a><br />
       E-mail: <a href="mailto:nyvlttomas89@seznam.cz">nyvlttomas89@seznam.cz</a>
     </p>
